@@ -3,13 +3,13 @@ require "discordrb"
 class Discordrb::Bot
   def voice(thing)
     id = thing.resolve_id
-    return @voices[id] if @voices[id]
+    return @telecom_sessions[id] if @telecom_sessions[id]
 
     channel = channel(id)
     return nil unless channel
 
     server_id = channel.server.id
-    return @voices[server_id] if @voices[server_id]
+    return @telecom_sessions[server_id] if @telecom_sessions[server_id]
 
     nil
   end
