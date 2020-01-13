@@ -1,0 +1,7 @@
+bin/
+.bundle/
+vendor/
+
+telecom.so
+telecom.a
+telecom.h
